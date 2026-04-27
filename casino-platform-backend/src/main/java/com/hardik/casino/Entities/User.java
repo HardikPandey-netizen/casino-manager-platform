@@ -36,6 +36,12 @@ public class User {
     @Builder.Default
     private boolean enabled = true;
 
+    @Column(name = "auth_provider")
+    private String authProvider;
+
+    @Column(name = "provider_id")
+    private String providerId;
+
     @Column(name = "reset_password_token", unique = true)
     private String resetPasswordToken;
 

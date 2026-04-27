@@ -53,6 +53,7 @@ public class UserService {
         user.setPassword(passwordEncoder.encode(password));
         user.setRole("USER");
         user.setEnabled(true);
+        user.setAuthProvider("LOCAL");
 
         return userRepository.save(user);
     }
